@@ -1,0 +1,17 @@
+C:\Users\artem\source\repos\oris hw1\oris hw1\bin\Debug\net8.0\search.html
+C:\Users\artem\source\repos\oris hw1\oris hw1\bin\Debug\net8.0\settings.json
+C:\Users\artem\source\repos\oris hw1\oris hw1\bin\Debug\net8.0\oris hw1.exe
+C:\Users\artem\source\repos\oris hw1\oris hw1\bin\Debug\net8.0\oris hw1.deps.json
+C:\Users\artem\source\repos\oris hw1\oris hw1\bin\Debug\net8.0\oris hw1.runtimeconfig.json
+C:\Users\artem\source\repos\oris hw1\oris hw1\bin\Debug\net8.0\oris hw1.dll
+C:\Users\artem\source\repos\oris hw1\oris hw1\bin\Debug\net8.0\oris hw1.pdb
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\oris hw1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\oris hw1.AssemblyInfoInputs.cache
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\oris hw1.AssemblyInfo.cs
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\oris hw1.csproj.CoreCompileInputs.cache
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\oris hw1.dll
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\refint\oris hw1.dll
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\oris hw1.pdb
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\oris hw1.genruntimeconfig.cache
+C:\Users\artem\source\repos\oris hw1\oris hw1\obj\Debug\net8.0\ref\oris hw1.dll
+C:\Users\artem\source\repos\oris hw1\oris hw1\bin\Debug\net8.0\static\index.html
