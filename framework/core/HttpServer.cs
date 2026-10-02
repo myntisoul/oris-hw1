@@ -42,66 +42,72 @@ public class HttpServer
 
     private async void ListenerCallback(IAsyncResult result)
     {
-        if (_listener.IsListening)
+        try
         {
-            var context = _listener.EndGetContext(result);
-            var request = context.Request;
-            Console.WriteLine("Пришел запрос");
-
-
-            string path = request.Url.LocalPath;
-            var response = context.Response;
-
-            // Читаем файл как байты
-            string filePath = Directory.GetCurrentDirectory() + $"/static{path}";
-            FileInfo fileInfo = new FileInfo(filePath);
-
-            if (!fileInfo.Exists)
+            if (_listener.IsListening)
             {
-                response.StatusCode = 404;
-                filePath = Directory.GetCurrentDirectory() + $"/static/404.html";
+                var context = _listener.EndGetContext(result);
+                var request = context.Request;
+                Console.WriteLine("Пришел запрос");
+
+                var response = context.Response;
+                string path = request.Url.LocalPath;
+
+                if (string.IsNullOrEmpty(path) || path.EndsWith("/"))
+                {
+                    path += "index.html";
+                }
+
+                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "static", path.TrimStart('/'));
+
+                //string filePath = Directory.GetCurrentDirectory() + $"/static{path}";
+                FileInfo fileInfo = new FileInfo(filePath);
+
+
+                if (!fileInfo.Exists)
+                {
+                    response.StatusCode = 404;
+                    filePath = Directory.GetCurrentDirectory() + $"/static/404.html";
+                }
+
+                switch (fileInfo.Extension)
+                {
+                    case ".html":
+                        response.ContentType = "text/html; charset=utf-8";
+                        break;
+                    case ".css":
+                        response.ContentType = "text/css; charset=utf-8";
+                        break;
+                    case ".js":
+                        response.ContentType = "text/javascript; charset=utf-8";
+                        break;
+                    case ".png":
+                        response.ContentType = "image/png";
+                        break;
+                    case ".ico":
+                        response.ContentType = "image/x-icon";
+                        break;
+                    case ".svg":
+                        response.ContentType = "image/svg+xml";
+                        break;
+                    case ".jpg":
+                        response.ContentType = "image/jpeg";
+                        break;
+                }
+
+                byte[] buffer = await File.ReadAllBytesAsync(filePath);
+                response.ContentLength64 = buffer.Length;
+                using Stream output = response.OutputStream;
+                await output.WriteAsync(buffer);
+                await output.FlushAsync();
+
+                Console.WriteLine("Запрос обработан");
+                Receive();
             }
-
-            switch (fileInfo.Extension)
-            {
-                case ".html":
-                    response.ContentType = "text/html; charset=utf-8";
-                    break;
-                case ".css":
-                    response.ContentType = "text/css; charset=utf-8";
-                    break;
-                case ".js":
-                    response.ContentType = "text/javascript; charset=utf-8";
-                    break;
-                case ".png":
-                    response.ContentType = "image/png";
-                    break;
-                case ".ico":
-                    response.ContentType = "image/x-icon";
-                    break;
-                case ".svg":
-                    response.ContentType = "image/svg+xml";
-                    break;
-                case ".jpg":
-                    response.ContentType = "image/jpeg";
-                    break;
-            }
-
-            byte[] buffer = await File.ReadAllBytesAsync(filePath);
-            response.ContentLength64 = buffer.Length;
-            using Stream output = response.OutputStream;
-            await output.WriteAsync(buffer);
-            await output.FlushAsync();
-
-            Console.WriteLine("Запрос обработан");
-            Receive();
-
-            // получаем поток ответа и пишем в него ответ
-
-
-
-            // отправляем данные
-
+        }
+        catch (HttpListenerException)
+        {
+            Console.WriteLine("stopped");
         }
     }
 }
