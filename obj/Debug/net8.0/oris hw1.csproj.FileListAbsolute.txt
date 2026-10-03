@@ -32,3 +32,4 @@ F:\artem\itis\орис\oris-hw1\obj\Debug\net8.0\refint\oris hw1.dll
 F:\artem\itis\орис\oris-hw1\obj\Debug\net8.0\oris hw1.pdb
 F:\artem\itis\орис\oris-hw1\obj\Debug\net8.0\oris hw1.genruntimeconfig.cache
 F:\artem\itis\орис\oris-hw1\obj\Debug\net8.0\ref\oris hw1.dll
+F:\artem\itis\орис\oris-hw1\bin\Debug\net8.0\static\index.html
