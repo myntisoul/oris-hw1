@@ -6,13 +6,12 @@ namespace oris_hw1.framework.core;
 public class HttpServer
 {
     private int _port = 8888;
-    private string filePath = Path.Combine("static", "index.html"); // Путь к файлу index.html
+    private string filePath = Path.Combine("static", "index.html"); 
     private HttpListener _listener;
     private CancellationTokenSource cts = new CancellationTokenSource();
 
     public void Start()
     {
-        // Проверка существования файла
         if (!File.Exists(filePath))
         {
             Console.WriteLine($"Ошибка: файл {filePath} не найден!");
@@ -60,7 +59,6 @@ public class HttpServer
 
                 string filePath = Path.Combine(Directory.GetCurrentDirectory(), "static", path.TrimStart('/'));
 
-                //string filePath = Directory.GetCurrentDirectory() + $"/static{path}";
                 FileInfo fileInfo = new FileInfo(filePath);
 
 
