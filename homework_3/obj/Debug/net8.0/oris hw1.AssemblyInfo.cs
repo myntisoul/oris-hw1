@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("oris hw1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f31624ee90dcf5469ab237f69b6dcdcb5aa754bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b78f8637796d3934399b6768142cb17bda7738d")]
 [assembly: System.Reflection.AssemblyProductAttribute("oris hw1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("oris hw1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

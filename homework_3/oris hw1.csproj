@@ -8,16 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="settings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="search.html">
+  <None Update="static/**/*">
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="static\index.html">
+  </None>
+  <None Update="settings.json">
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+  </None>
+</ItemGroup>
 
   <ItemGroup>
     <Folder Include="framework\settings\" />

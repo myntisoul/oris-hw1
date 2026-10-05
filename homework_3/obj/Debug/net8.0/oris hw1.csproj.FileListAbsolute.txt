@@ -1,5 +1,3 @@
-F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\search.html
-F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\settings.json
 F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\index.html
 F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\oris hw1.exe
 F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\oris hw1.deps.json
@@ -16,3 +14,15 @@ F:\artem\itis\орис\oris-hw1\homework_3\obj\Debug\net8.0\refint\oris hw1.dll
 F:\artem\itis\орис\oris-hw1\homework_3\obj\Debug\net8.0\oris hw1.pdb
 F:\artem\itis\орис\oris-hw1\homework_3\obj\Debug\net8.0\oris hw1.genruntimeconfig.cache
 F:\artem\itis\орис\oris-hw1\homework_3\obj\Debug\net8.0\ref\oris hw1.dll
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\404.html
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\lion.jpg
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\satisfactory\index.html
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\search\index.html
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\steam\index.html
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\forget.html
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\image\bg.jpg
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\image\logo.png
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\login.html
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\register.html
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\static\style.css
+F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\settings.json

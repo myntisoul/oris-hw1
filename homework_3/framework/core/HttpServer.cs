@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Net;
 using System.Text;
 
 namespace oris_hw1.framework.core;
@@ -47,10 +48,32 @@ public class HttpServer
             {
                 var context = _listener.EndGetContext(result);
                 var request = context.Request;
+                string path = request.Url.LocalPath;
+                var response = context.Response;
                 Console.WriteLine("Пришел запрос");
 
-                var response = context.Response;
-                string path = request.Url.LocalPath;
+                if (request.HttpMethod == "POST" && path == "/login")
+                {
+                    using (var reader = new StreamReader(request.InputStream, request.ContentEncoding))
+                    {
+                        string body = await reader.ReadToEndAsync();
+                        Console.WriteLine(body);
+                        string email = body.Split('=')[1].Split('&')[0];
+                        string password = body.Split("=")[2];
+                        email = email.Replace("%40", "@");
+                        Console.WriteLine(email + ":" + password);
+
+                        string responseText = "<html><body><h2>Успешно! Данные отправлены.</h2><a href='/login'>Назад</a></body></html>";
+                        byte[] bufferFile = Encoding.UTF8.GetBytes(responseText);
+                        response.ContentLength64 = bufferFile.Length;
+                        response.ContentType = "text/html; charset=utf-8";
+                        using Stream outputFile = response.OutputStream;
+                        await outputFile.WriteAsync(bufferFile);
+                        await outputFile.FlushAsync();
+                    }
+
+                }
+                
 
                 if (string.IsNullOrEmpty(path) || path.EndsWith("/"))
                 {
