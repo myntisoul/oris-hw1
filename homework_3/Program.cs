@@ -23,7 +23,7 @@ namespace oris
             HttpServer server = new HttpServer();
             server.Start();
             Console.WriteLine("write 'stop' to stop the server");
-            Console.WriteLine("http://127.0.0.1:8888/");
+            Console.WriteLine("http://127.0.0.1:8888/login.html");
             while (true)
             {
                 string command = Console.ReadLine();

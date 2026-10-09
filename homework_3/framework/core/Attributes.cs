@@ -10,8 +10,8 @@ namespace oris_hw1.framework.core
     public class HttpController : Attribute { }
 
     [AttributeUsage(AttributeTargets.Method)]
-    public class HttpGet : Attribute { }
+    public class HttpGET : Attribute { }
 
     [AttributeUsage(AttributeTargets.Method)]
-    public class HttpPost : Attribute { }
+    public class HttpPOST : Attribute { }
 }
