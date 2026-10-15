@@ -2,42 +2,35 @@
 using System.Net;
 using System.IO;
 using System.Threading.Tasks;
-using System.Net.Mail;
+//using System.Net.Mail;
+using MailKit.Net.Smtp;
+using MimeKit;
 
 namespace NetConsoleApp
 {
     class SendMessage
     {
-        public void Send()
-        {
-            //GET http://localhost:2323/steam/send?to=test@test.ru&hero=
 
-            // отправитель - устанавливаем адрес и отображаемое в письме имя
-            MailAddress from = new MailAddress("matje_bal1@mail.ru", "artem");
-            // кому отправляем
-            MailAddress toAddress = new MailAddress("artem_mkarimov@mail.ru");
-            // создаем объект сообщения
-            MailMessage m = new MailMessage(from, toAddress);
-            // тема письма
-            m.Subject = "Тест";
-            // текст письма
-            m.Body = "<h2>Письмо-тест работы smtp-клиента</h2>";
-            // письмо представляет код html
-            m.IsBodyHtml = true;
-            // адрес smtp-сервера и порт, с которого будем отправлять письмо
-            SmtpClient smtp = new SmtpClient("smtp.mail.ru", 465);
-            // логин и пароль
-            smtp.Credentials = new NetworkCredential("matje_bal1@mail.ru", "uUNgpYstL5EybUo1Wm9k");
-            smtp.EnableSsl = true;
+
+        public async Task Send()
+        {
             try
             {
-                smtp.Send(m);
-                Console.WriteLine("sent");
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress("artem", "matje_bal1@mail.ru"));
+                message.To.Add(new MailboxAddress("", "artem_mkarimov@mail.ru"));
+                message.Subject = "Тест";
+                message.Body = new TextPart("html") { Text = "<h2>Письмо-тест</h2>" };
+
+                using var client = new SmtpClient();
+
+                await client.ConnectAsync("smtp.mail.ru", 465, true);
+                await client.AuthenticateAsync("matje_bal1@mail.ru", "uUNgpYstL5EybUo1Wm9k");
+                await client.SendAsync(message);
+                await client.DisconnectAsync(true);
+                Console.WriteLine("Письмо отправлено!");
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+            catch (Exception ex) { Console.WriteLine(ex.ToString()); }
         }
     }
 }
