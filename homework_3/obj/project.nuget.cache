@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Vd55Gy78zcM=",
+  "dgSpecHash": "50Hv6ukOZwc=",
   "success": true,
   "projectFilePath": "C:\\Users\\artem\\source\\repos\\oris-hw111\\homework_3\\oris hw1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\artem\\.nuget\\packages\\htmlagilitypack\\1.13.0\\htmlagilitypack.1.13.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,4 +1,5 @@
-﻿using oris_hw1.framework.core;
+﻿using NetConsoleApp;
+using oris_hw1.framework.core;
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -15,6 +16,9 @@ namespace oris
     {
         static async Task Main()
         {
+            SendMessage sendMsg= new SendMessage();
+            sendMsg.Send();
+
             string pathSettings = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "settings.json");
             string jsonString = File.ReadAllText(pathSettings);
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
