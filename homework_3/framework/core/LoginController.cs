@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace oris_hw1.framework.core
 {
-    [HttpController]
+    [HttpController("Login")]
     public class LoginController
     {
         [HttpGET]

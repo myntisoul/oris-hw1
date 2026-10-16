@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Reflection;
 using System.Text;
+using System.Xml.Linq;
 
 namespace oris_hw1.framework.core;
 
@@ -54,7 +55,7 @@ public class HttpServer
                 var response = context.Response;
                 Console.WriteLine("Пришел запрос");
 
-                bool isHandledByController = TryRoute(context);
+                bool isHandledByController = await TryRoute(context);
                 if (isHandledByController) { Receive(); return; }
                     
                 //if (request.HttpMethod == "POST" && path == "/login")
@@ -137,7 +138,7 @@ public class HttpServer
         }
     }
 
-    private bool TryRoute(HttpListenerContext context)
+    private async Task<bool> TryRoute(HttpListenerContext context)
     {
         string path = context.Request.Url.LocalPath;
         if (path.Contains(".") || path == "/") return false;
@@ -150,7 +151,7 @@ public class HttpServer
         var assembly = Assembly.GetExecutingAssembly();
         var controller = assembly.GetTypes()
             .Where(t => Attribute.IsDefined(t, typeof(HttpController)))
-            .FirstOrDefault(c => c.Name.ToLower() == controllerName.ToLower() + "controller" || c.Name.ToLower() == controllerName.ToLower());
+            .FirstOrDefault(c => c.GetCustomAttribute<HttpController>().Name.ToLower() == controllerName.ToLower());
         if (controller == null) return false;
 
         var method = controller.GetMethods()
@@ -161,9 +162,6 @@ public class HttpServer
             .FirstOrDefault();
         if (method == null) return false;
         object[] queryParams;
-
-        //Console.WriteLine($"[DEBUG] controllerName={controllerName}, found controller={controller?.Name}");
-        //Console.WriteLine($"[DEBUG] method={method?.Name}");
 
         if (context.Request.HttpMethod == "POST")
         {
@@ -179,17 +177,38 @@ public class HttpServer
         else
         {
             var parameters = method.GetParameters();
+            //foreach (var par in parameters) Console.Write(par.Name + " ");
             queryParams = new object[parameters.Length];
             for (int i = 0; i < parameters.Length; i++)
             {
-                if (i < strParams.Length)
-                    queryParams[i] = Convert.ChangeType(strParams[i], parameters[i].ParameterType);
+                //Console.WriteLine($"[DEBUG] параметр: {parameters[i].Name}, тип: {parameters[i].ParameterType}");
+                //Console.WriteLine($"[DEBUG] QueryString[{parameters[i].Name}] = {context.Request.QueryString[parameters[i].Name]}");
+                string queryValue = context.Request.QueryString[parameters[i].Name];
+                Console.WriteLine(queryValue);
+                string value = null;
+
+                if (queryValue != null) value = queryValue;
+                else if (i < strParams.Length) value = strParams[i];
+
+                if (value != null)
+                    queryParams[i] = Convert.ChangeType(value, parameters[i].ParameterType);
                 else
                     queryParams[i] = parameters[i].ParameterType.IsValueType ? Activator.CreateInstance(parameters[i].ParameterType) : null;
             }
         }
         var controllerInstance = Activator.CreateInstance(controller);
         var ret = method.Invoke(controllerInstance, queryParams);
+
+        if (ret is Task task)
+        {
+            await task;
+            // Если Task<T>, достаём Result
+            var resultProp = task.GetType().GetProperty("Result");
+            if (resultProp != null)
+                ret = resultProp.GetValue(task);
+            else
+                ret = null; // Task без результата
+        }
 
         if (ret != null)
         {

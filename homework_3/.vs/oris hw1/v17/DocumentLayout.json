@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\sendmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\sendmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\homeworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\homeworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\attributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,28 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SendMessage.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\SendMessage.cs",
-              "RelativeDocumentMoniker": "framework\\core\\SendMessage.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\SendMessage.cs",
-              "RelativeToolTip": "framework\\core\\SendMessage.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAABGAAAAAAAAAA==",
+              "Title": "HomeworkController.cs",
+              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\HomeworkController.cs",
+              "RelativeDocumentMoniker": "framework\\core\\HomeworkController.cs",
+              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\HomeworkController.cs",
+              "RelativeToolTip": "framework\\core\\HomeworkController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-15T17:26:16.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoginController.cs",
               "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\LoginController.cs",
               "RelativeDocumentMoniker": "framework\\core\\LoginController.cs",
               "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\LoginController.cs",
               "RelativeToolTip": "framework\\core\\LoginController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T17:26:16.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T17:26:16.463Z"
             },
             {
               "$type": "Document",
@@ -70,23 +69,21 @@
               "RelativeDocumentMoniker": "framework\\core\\Attributes.cs",
               "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\Attributes.cs",
               "RelativeToolTip": "framework\\core\\Attributes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T17:26:16.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T17:26:16.464Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "HttpServer.cs",
               "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\HttpServer.cs",
               "RelativeDocumentMoniker": "framework\\core\\HttpServer.cs",
               "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\HttpServer.cs",
               "RelativeToolTip": "framework\\core\\HttpServer.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAuwI0AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAwwMMAAACMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T17:26:16.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T17:26:16.465Z"
             },
             {
               "$type": "Document",
@@ -96,7 +93,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwCEAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB0AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-15T17:26:16.467Z",
               "EditorCaption": ""

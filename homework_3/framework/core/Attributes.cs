@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 namespace oris_hw1.framework.core
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class HttpController : Attribute { }
+    public class HttpController : Attribute
+    {
+        public string Name { get; }
+        public HttpController(string name = null) { Name = name; }
+    }
 
     [AttributeUsage(AttributeTargets.Method)]
     public class HttpGET : Attribute { }
