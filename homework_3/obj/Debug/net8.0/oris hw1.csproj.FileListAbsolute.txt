@@ -68,3 +68,11 @@ F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\System.Formats.Asn1.
 F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 F:\artem\itis\орис\oris-hw1\homework_3\bin\Debug\net8.0\homework.zip
+C:\Users\artem\source\repos\oris-hw111\homework_3\bin\Debug\net8.0\homework.zip
+C:\Users\artem\source\repos\oris-hw111\homework_3\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\artem\source\repos\oris-hw111\homework_3\bin\Debug\net8.0\MailKit.dll
+C:\Users\artem\source\repos\oris-hw111\homework_3\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\artem\source\repos\oris-hw111\homework_3\bin\Debug\net8.0\MimeKit.dll
+C:\Users\artem\source\repos\oris-hw111\homework_3\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\artem\source\repos\oris-hw111\homework_3\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\artem\source\repos\oris-hw111\homework_3\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

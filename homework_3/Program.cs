@@ -15,9 +15,6 @@ namespace oris
     {
         static async Task Main()
         {
-            //SendMessage sendMsg = new SendMessage();
-            //sendMsg.Send();
-
             string pathSettings = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "settings.json");
             string jsonString = File.ReadAllText(pathSettings);
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
@@ -27,7 +24,6 @@ namespace oris
             server.Start();
             Console.WriteLine("write 'stop' to stop the server");
             Console.WriteLine("http://127.0.0.1:8888/login.html");
-            Console.WriteLine("http://127.0.0.1:8888/home-work/send?to=artemy.mkarimov@gmail.com");
             while (true)
             {
                 string command = Console.ReadLine();
