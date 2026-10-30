@@ -19,85 +19,88 @@ namespace oris2
         public string RenderFromString(string htmlTemplate, object dataModel)
         {
             //2)
-            //Type type = dataModel.GetType();
-            //Regex regex = new Regex(@"\$\{(.*?)\}");
-            //string result = regex.Replace(htmlTemplate, (match) =>
-            //{
-            //    string fullPath = match.Groups[1].Value;
-            //    string propertyName = fullPath.Split('.')[1];
-            //    PropertyInfo property = type.GetProperty(propertyName);
-            //    if (property != null)
-            //    {
-            //        var value = property.GetValue(dataModel);
-            //        return value?.ToString() ?? "";
-            //    }
-            //    return match.Value;
-            //});
-            //return result;
+            Type type = dataModel.GetType();
+            Regex regex = new Regex(@"\$\{(.*?)\}");
+            string result = regex.Replace(htmlTemplate, (match) =>
+            {
+                string fullPath = match.Groups[1].Value;
+                string propertyName = fullPath.Split('.')[1];
+                PropertyInfo property = type.GetProperty(propertyName);
+                if (property != null)
+                {
+                    var value = property.GetValue(dataModel);
+                    return value?.ToString() ?? "";
+                }
+                return match.Value;
+            });
+            return result;
+        }
+        public string RenderFromString2(string htmlTemplate, object dataModel)
+        {
+            Type type = dataModel.GetType();
+            Regex regex = new Regex(@"\$\{(.*?)\}");
+            string result = regex.Replace(htmlTemplate, (match) =>
+            {
+                string[] fullPath = match.Groups[1].Value.Split(".");
+                if (fullPath.Length == 3)
+                {
+                    string propertyName1 = fullPath[1];
+                    string propertyName2 = fullPath[2];
+                    PropertyInfo property1 = type.GetProperty(propertyName1);
+                    if (property1 != null)
+                    {
+                        object property1Value = property1.GetValue(dataModel);
+                        if (property1Value != null)
+                        {
+                            Type property1Type = property1Value.GetType();
+                            PropertyInfo property2 = property1Type.GetProperty(propertyName2);
+                            if (property2 != null)
+                            {
+                                var value = property2.GetValue(property1Value);
+                                return value?.ToString() ?? "";
+                            }
+                        }
+                    }
+                    return match.Value;
+                }
+                else
+                {
+                    string propertyName = fullPath[1];
+                    PropertyInfo property = type.GetProperty(propertyName);
+                    if (property != null)
+                    {
+                        var value = property.GetValue(dataModel);
+                        return value?.ToString() ?? "";
+                    }
+                    return match.Value;
+                }
 
-            //3)
-            //Type type = dataModel.GetType();
-            //Regex regex = new Regex(@"\$\{(.*?)\}");
-            //string result = regex.Replace(htmlTemplate, (match) =>
-            //{
-            //    string[] fullPath = match.Groups[1].Value.Split(".");
-            //    //Console.WriteLine(fullPath);
-            //    //foreach (string s in fullPath) Console.WriteLine(s);
-            //    if (fullPath.Length == 3)
-            //    {
-            //        string propertyName1 = fullPath[1];
-            //        string propertyName2 = fullPath[2];
-            //        PropertyInfo property1 = type.GetProperty(propertyName1);
-            //        if (property1 != null)
-            //        {
-            //            object property1Value = property1.GetValue(dataModel);
-            //            if (property1Value != null)
-            //            {
-            //                Type property1Type = property1Value.GetType();
-            //                PropertyInfo property2 = property1Type.GetProperty(propertyName2);
-            //                if (property2 != null)
-            //                {
-            //                    var value = property2.GetValue(property1Value);
-            //                    return value?.ToString() ?? "";
-            //                }
-            //            }
-            //        }
-            //        return match.Value;
-            //    }
-            //    else 
-            //    {
-            //        string propertyName = fullPath[1];
-            //        PropertyInfo property = type.GetProperty(propertyName);
-            //        if (property != null)
-            //        {
-            //            var value = property.GetValue(dataModel);
-            //            return value?.ToString() ?? "";
-            //        }
-            //        return match.Value;
-            //    }
+            });
+            return result;
+        }
 
-            //});
-            //return result;
+        public string RenderFromString3(string htmlTemplate, object dataModel)
+        {
+            Type type = dataModel.GetType();
+            Regex regex = new Regex(@"\$if\s*\((?<field>\w+)\)(?<truePart>.*?)\$else(?<falsePart>.*)", RegexOptions.Singleline);
+            string result = regex.Replace(htmlTemplate, (match) =>
+            {
+                string field = match.Groups["field"].Value;
+                bool condition = false;
+                PropertyInfo prop = type.GetProperty(field);
+                if (prop != null && prop.PropertyType == typeof(bool))
+                {
+                    condition = (bool)prop.GetValue(dataModel);
+                }
 
-            //4)
-            //Type type = dataModel.GetType();
-            //Regex regex = new Regex(@"\$if\s*\((?<field>\w+)\)(?<truePart>.*?)\$else(?<falsePart>.*)", RegexOptions.Singleline);
-            //string result = regex.Replace(htmlTemplate, (match) =>
-            //{
-            //    string field = match.Groups["field"].Value;
-            //    bool condition = false;
-            //    PropertyInfo prop = type.GetProperty(field);
-            //    if (prop != null && prop.PropertyType == typeof(bool))
-            //    {
-            //        condition = (bool)prop.GetValue(dataModel);
-            //    }
+                if (condition) return match.Groups["truePart"].Value;
+                else return match.Groups["falsePart"].Value;
+            });
+            return result;
+        }
 
-            //    if (condition) return match.Groups["truePart"].Value;
-            //    else return match.Groups["falsePart"].Value;
-            //});
-            //return result;
-
-            //5)
+        public string RenderFromString4(string htmlTemplate, object dataModel)
+        {
             string result = Regex.Replace(htmlTemplate, @"\$foreach\s*\((?<type>\w+)\s+(?<varName>\w+)\s+in\s+(?<array>\w+)\)\s*\{(?<body>.*?)\}", (match) =>
             {
                 string arrayName = match.Groups["array"].Value;
@@ -107,7 +110,7 @@ namespace oris2
                 PropertyInfo arrayProp = arrayType.GetProperty(arrayName);
                 //Console.WriteLine(arrayProp.Name);
                 if (arrayProp == null) return match.Value;
-                
+
                 object arrayObj = arrayProp.GetValue(dataModel);
                 if (arrayObj is not IEnumerable enumerable) return match.Value;
 
@@ -124,11 +127,12 @@ namespace oris2
                     });
                     sb.Append(renderedItem);
                 }
-                
+
                 return sb.ToString();
             });
             return result;
         }
+        
 
         public string RenderToFile(string inputFilePath, string outputFilePath, object dataModel)
         {

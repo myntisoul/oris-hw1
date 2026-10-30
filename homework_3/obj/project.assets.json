@@ -379,11 +379,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\artem\\source\\repos\\oris-hw111\\homework_3\\oris hw1.csproj",
+      "projectUniqueName": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\oris hw1.csproj",
       "projectName": "oris hw1",
-      "projectPath": "C:\\Users\\artem\\source\\repos\\oris-hw111\\homework_3\\oris hw1.csproj",
+      "projectPath": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\oris hw1.csproj",
       "packagesPath": "C:\\Users\\artem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\artem\\source\\repos\\oris-hw111\\homework_3\\obj\\",
+      "outputPath": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

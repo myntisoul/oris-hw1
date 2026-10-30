@@ -23,7 +23,9 @@ namespace oris2
         /// Строка с готовой HTML-разметкой после обработки шаблона.
         /// </returns>
         string RenderFromString(string htmlTemplate, object dataModel);
-
+        string RenderFromString2(string htmlTemplate, object dataModel);
+        string RenderFromString3(string htmlTemplate, object dataModel);
+        string RenderFromString4(string htmlTemplate, object dataModel);
         /// <summary>
         /// Выполняет обработку HTML-шаблона, загруженного из файла.
         /// </summary>

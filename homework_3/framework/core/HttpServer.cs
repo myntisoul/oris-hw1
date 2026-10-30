@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Reflection;
+using System.Runtime;
 using System.Text;
 using System.Xml.Linq;
 
@@ -54,8 +55,12 @@ public class HttpServer
                 string path = request.Url.LocalPath;
                 var response = context.Response;
                 Console.WriteLine("Пришел запрос");
+                using var reader = new StreamReader(context.Request.InputStream, context.Request.ContentEncoding);
+                string body = reader.ReadToEnd();
+                string httpMethod = context.Request.HttpMethod;
+                
 
-                bool isHandledByController = await TryRoute(context);
+                (bool isHandledByController, string htmlResponse) = await TryRoute(httpMethod, path, body);
                 if (isHandledByController) { Receive(); return; }
                     
                 //if (request.HttpMethod == "POST" && path == "/login")
@@ -138,13 +143,12 @@ public class HttpServer
         }
     }
 
-    private async Task<bool> TryRoute(HttpListenerContext context)
+    private async Task<(bool isHandled, string responseHtml)> TryRoute(string httpMethod, string path, string body)
     {
-        string path = context.Request.Url.LocalPath;
-        if (path.Contains(".") || path == "/") return false;
+        if (path.Contains(".") || path == "/") return (false, null);
 
         string[] segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
-        if (segments.Length == 0) return false;
+        if (segments.Length == 0) return (false, null);
         string controllerName = segments[0];
         string[] strParams = segments.Skip(1).ToArray();
 
@@ -152,21 +156,19 @@ public class HttpServer
         var controller = assembly.GetTypes()
             .Where(t => Attribute.IsDefined(t, typeof(HttpController)))
             .FirstOrDefault(c => c.GetCustomAttribute<HttpController>().Name.ToLower() == controllerName.ToLower());
-        if (controller == null) return false;
+        if (controller == null) return (false, null);
 
         var method = controller.GetMethods()
             .Where(t => t.GetCustomAttributes(true)
                 .Any(attr => string.Equals(attr.GetType().Name,
-                              $"Http{context.Request.HttpMethod}",
+                              $"Http{httpMethod}",
                               StringComparison.OrdinalIgnoreCase)))
             .FirstOrDefault();
-        if (method == null) return false;
+        if (method == null) return (false, null);
         object[] queryParams;
 
-        if (context.Request.HttpMethod == "POST")
+        if (httpMethod == "POST")
         {
-            using var reader = new StreamReader(context.Request.InputStream, context.Request.ContentEncoding);
-            string body = reader.ReadToEnd();
             Console.WriteLine(body);
             string email = body.Split('=')[1].Split('&')[0];
             string password = body.Split("=")[2];
@@ -183,7 +185,7 @@ public class HttpServer
             {
                 //Console.WriteLine($"[DEBUG] параметр: {parameters[i].Name}, тип: {parameters[i].ParameterType}");
                 //Console.WriteLine($"[DEBUG] QueryString[{parameters[i].Name}] = {context.Request.QueryString[parameters[i].Name]}");
-                string queryValue = context.Request.QueryString[parameters[i].Name];
+                string queryValue = 
                 Console.WriteLine(queryValue);
                 string value = null;
 

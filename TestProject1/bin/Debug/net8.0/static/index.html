@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        
+            *{
+            font-family: 'Afacad', sans-serif;
+            font-optical-sizing: auto;
+            }
+            .page-center 
+            {
+                display: flex;
+                justify-content: center; 
+                align-items: center;     
+                height: 60vh;           
+                background-color: #ffffff;
+                flex-direction: column;
+            }
+            
+            .search-bar
+            {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                height: 50px;
+                width: 100%;
+                max-width: 500px;
+                border-radius: 20px;
+                border: 1px solid #e7e7e7;
+                background-color: #FAFAFA;
+            }
+            .search-bar input
+            {
+                border: none;
+                outline: none;
+                background: transparent;
+                height: 50px;
+                width: 500px;
+            }
+            .search-bar ::placeholder
+            {
+                font-size: 20px;
+                color: gray;
+            }
+            .search-bar img
+            {
+                width: 15px;
+                height: 15px;
+                fill: #b3b3b3;
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+            .clock-n-greeting
+            {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            .clock-n-greeting h5
+            {
+                font-size: 50px;
+                margin-bottom: 0;
+            }
+
+            .clock-n-greeting h2
+            {
+                color: blue;
+                margin-top: 0;
+            }
+
+            .temp
+            {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                margin-right: 20px;
+            }
+            .temp-text
+            {
+                margin-bottom: 0;
+            }
+            .loc
+            {
+                margin-top: 0;
+                color: blue;
+            }
+            .icon img
+            {
+                width: 25px;
+                height: 25px;
+            }
+            .icon 
+            {
+                width: 50px;
+                height: 50px;
+                background-color: #FAFAFA;
+                border: 1px solid #e0e0e0; 
+                border-radius: 15px;       
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                cursor: pointer;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+                transition: all 0.2s ease; 
+            }
+            .buttons-container
+            {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+            @media (max-width: 600px) {
+
+                .page-center {
+                    padding: 0 20px;
+                }
+
+                .clock-n-greeting h5 {
+                    font-size: 48px; 
+                }
+                
+                .clock-n-greeting h2 {
+                    font-size: 18px;
+                }
+                .clock-n-greeting {
+                    margin-top: auto;
+                }
+
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .search-bar {
+                    height: 45px;
+                    padding: 0 15px;
+                    margin-top: auto;
+                }
+                
+                .search-bar input {
+                    font-size: 14px;
+                }
+                .buttons-container {
+                    gap: 10px;
+                    flex-wrap: wrap; 
+                }
+                .page-center
+                {
+                    height: 75vh;
+                }
+}           
+    </style>
+
+    <body>
+        <div class="temp"> 
+            <h3 class="temp-text">36°</h3>
+            <h5 class="loc">Ahmedabad</h5></div>
+        <div class="page-center">
+            <div class="clock-n-greeting">
+                <h5>09:11:01</h5> 
+                <h2>Good Morning, Saad</h2>
+            </div>
+
+            <div class="search-bar">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIior9X2y3SJGpIC8OHXzbQZrtKr2Xw6-dNBVSBIpKOg&s=10">
+                <input type="text" placeholder="Search">
+            </div>
+            
+            <div class="buttons-container">
+                <a class="icon" href="https://www.youtube.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                </a>
+                <a class="icon" href="https://www.chatgpt.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT">
+                </a>
+                <a class="icon" href="https://www.geeksforgeeks.org/">
+                    <img src="data:image/png;base64,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" alt="GeeksForGeeks">
+                </a>
+                <a class="icon" href="https://chat.deepseek.com">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQELL5QZ83NiivoF3GYo0GcjCjsA7ndFmZlzNSWp75TyA&s=10, alt="DeepSeek">
+                </a>
+                <a class="icon" href="https://www.github.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                </a>
+                <a class="icon">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACUCAMAAABGFyDbAAAAY1BMVEUAfrv///8AfLoAd7gAerlJj8Pr8vd6qM+Wutn5/P1jm8n0+Pt9rNJal8cAdbcAc7bV5PCgwd3P3+1wps9CkcQAb7QyiL+tyeHh7PQAabJTk8WEstSGrtJQlsa60+YphL3F2eqIMRPnAAADqklEQVR4nO2ci3KqMBCGyYWLoAkIAtUqvv9TnlD1VGC3bUwP2TOTf6bTmU4GPzdL9gLdiN1VbjWPvIrrbfmgie6/Kyn8Qo0SsppgJa32jXSTbpNPrCQmYKqbRJw8sAopfdN8SsrijpWSsdUokd6wOiJ+9ZDuPrCUb4651IiVkdrCUSJjUXH0fIouxY9FtCdnLGOufdSRc63R6aOa0Jn1kKyjhpxrGedqzI9viKUIIgX9vqRQQhC7WaXWzXuWvZ+1pkMmZd49cutLTiUnE8OFPenakAgH4sxmqglET11v5lgsO/imkgtbUbAXH3oIK2n9hgVdQVTG771uI9cwFWODT3OZZBqR16RR7TGs0mfS0YIO/+H0HgsSviswLJb7i0EyXx6lD9X+rPUVVurPWqZ8pLiJRF0+UlcMy+sBoU4YltemE9HgEykkVF88Z1xIYhN7rndFDGHl3tN5lS6P1JN3KsN1TKZQRU2i9Sva7pnqSuWRAj+cu/62lX2XH+h0d6QY4l1d5/FArA3BuRRC0jFUUNB/IC7leN8Ykbl1uNAqztN3ozRv+EE5HjSSA5pdk0OLnk0iBa+vfXKvDIqkL6tGOR2BuxzStGPTgmv+ZopCpRe2UNLtXgbjcV8AYukzltgyYE2yu63hui6XUB9WK2P1mpfxOAGvOKkSDRb0oTcsdUbLFKPL8FLcd8XiOsVLzVH9SxmlIxZXgFPNdHrBXo5Y8nsqxir7csUJS2q0PTaRvb2csHQH/R2QdePaBStGakxA8/P5X2LVP6ZiF0tzuWDhvbFvrvdPsazUv5HEsvT61bCuNLE2Vk3P1bDs3odaD6u3CUHrYTEPWJsiSb47xmyc6zewNt023x2Ped19mXplFomXO1afH/RYgpmSQ79t0T4/Y3uLrpkzVhU932GCI2n9iLXiJp5m3TAu0MSwH1bDWvqLFJjr23Sv3bBKIAALLN+xeYrkhLXJgQ/iEeL2JsleB+sK3lsKeSxvExWdsOBkhUvPWEhqd4B3cS2sEolyGj4j1sKqkGgi4IeUa2FhZYOEj4i1sLC3kZH3BVbCQj/GL9a9vwVcE34XJWAFrIAVsAJWwApYAStgBayAFbACVsAKWAErYAWsgBWwAlbAWhFrOGWAqskjSdlAazLsn5x5Cy7P2h9TGQlQ0y8mwTX4w1T4mmTevw76dRHcW4NEdLwO0WFEREc3ER10RXQsGNEhalRHzlEd0Ed0nCHV4Y9ER2VSHSzKiI5hZdSG1v4B4oVOfWOMR6MAAAAASUVORK5CYII=">
+                </a>
+                <a class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2OWkR-GTJyv8nSuoA8Mcu147-bYxCGCtEayKXaRQK4A&s=10", alt="Add">
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
