@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Specialized;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Net.Http;
 using System.Reflection;
 using System.Runtime;
 using System.Text;
 using System.Xml.Linq;
+using TestProject1;
 
 namespace oris_hw1.framework.core;
 
@@ -14,6 +16,7 @@ public class HttpServer
     private string filePath = Path.Combine("static", "index.html"); 
     private HttpListener _listener;
     private CancellationTokenSource cts = new CancellationTokenSource();
+    public IEmailSender EmailSender { get; set; } = new RealEmailSender();
 
     public void Start()
     {
@@ -58,34 +61,12 @@ public class HttpServer
                 using var reader = new StreamReader(context.Request.InputStream, context.Request.ContentEncoding);
                 string body = reader.ReadToEnd();
                 string httpMethod = context.Request.HttpMethod;
-                
+                NameValueCollection queryString = request.QueryString;
 
-                (bool isHandledByController, string htmlResponse) = await TryRoute(httpMethod, path, body);
+                (bool isHandledByController, string htmlResponse) = await TryRoute(httpMethod, path, body, queryString);
+                Console.WriteLine(isHandledByController);
                 if (isHandledByController) { Receive(); return; }
                     
-                //if (request.HttpMethod == "POST" && path == "/login")
-                //{
-                //    using (var reader = new StreamReader(request.InputStream, request.ContentEncoding))
-                //    {
-                //        string body = await reader.ReadToEndAsync();
-                //        Console.WriteLine(body);
-                //string email = body.Split('=')[1].Split('&')[0];
-                //string password = body.Split("=")[2];
-                //email = email.Replace("%40", "@");
-                //Console.WriteLine(email + ":" + password);
-
-                //        string responseText = "<html><body><h2>Успешно! Данные отправлены.</h2><a href='/login'>Назад</a></body></html>";
-                //        byte[] bufferFile = Encoding.UTF8.GetBytes(responseText);
-                //        response.ContentLength64 = bufferFile.Length;
-                //        response.ContentType = "text/html; charset=utf-8";
-                //        using Stream outputFile = response.OutputStream;
-                //        await outputFile.WriteAsync(bufferFile);
-                //        await outputFile.FlushAsync();
-                //    }
-
-                //}
-
-
                 if (string.IsNullOrEmpty(path) || path.EndsWith("/"))
                 {
                     path += "index.html";
@@ -143,7 +124,7 @@ public class HttpServer
         }
     }
 
-    private async Task<(bool isHandled, string responseHtml)> TryRoute(string httpMethod, string path, string body)
+    public async Task<(bool isHandled, string responseHtml)> TryRoute(string httpMethod, string path, string body, NameValueCollection queryString)
     {
         if (path.Contains(".") || path == "/") return (false, null);
 
@@ -183,46 +164,48 @@ public class HttpServer
             queryParams = new object[parameters.Length];
             for (int i = 0; i < parameters.Length; i++)
             {
-                //Console.WriteLine($"[DEBUG] параметр: {parameters[i].Name}, тип: {parameters[i].ParameterType}");
-                //Console.WriteLine($"[DEBUG] QueryString[{parameters[i].Name}] = {context.Request.QueryString[parameters[i].Name]}");
-                string queryValue = 
-                Console.WriteLine(queryValue);
                 string value = null;
 
-                if (queryValue != null) value = queryValue;
+                if (queryString != null) value = queryString[parameters[i].Name];
                 else if (i < strParams.Length) value = strParams[i];
-
+                Console.WriteLine(value);
+                Console.WriteLine();
                 if (value != null)
                     queryParams[i] = Convert.ChangeType(value, parameters[i].ParameterType);
                 else
                     queryParams[i] = parameters[i].ParameterType.IsValueType ? Activator.CreateInstance(parameters[i].ParameterType) : null;
             }
         }
-        var controllerInstance = Activator.CreateInstance(controller);
+        var constructor = controller.GetConstructors().First();
+
+        var ctorParams = constructor.GetParameters();
+        object[] ctorArgs = new object[ctorParams.Length];
+
+        for (int i = 0; i < ctorParams.Length; i++)
+        {
+            Type paramType = ctorParams[i].ParameterType;
+
+            if (paramType == typeof(IEmailSender))
+            {
+                ctorArgs[i] = EmailSender;
+            }
+            else
+            {
+                ctorArgs[i] = null;
+            }
+        }
+        var controllerInstance = Activator.CreateInstance(controller, ctorArgs);
         var ret = method.Invoke(controllerInstance, queryParams);
 
         if (ret is Task task)
         {
             await task;
-            // Если Task<T>, достаём Result
             var resultProp = task.GetType().GetProperty("Result");
-            if (resultProp != null)
-                ret = resultProp.GetValue(task);
-            else
-                ret = null; // Task без результата
+            ret = resultProp?.GetValue(task);
         }
 
-        if (ret != null)
-        {
-            string responseText = ret.ToString();
-            byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseText);
-            context.Response.ContentLength64 = buffer.Length;
-            context.Response.ContentType = "text/html; charset=utf-8";
-            using Stream output = context.Response.OutputStream;
-            output.Write(buffer);
-            output.Flush();
-        }
-        return true;
+        string responseHtml = ret?.ToString();
+        return (true, responseHtml);
     }
 }
 

@@ -7,6 +7,7 @@ using TestProject1;
 
 namespace oris_hw1.framework.core
 {
+    [HttpController("home-work")]
     public class HomeworkController
     {
         private readonly IEmailSender _emailSender;
@@ -16,6 +17,7 @@ namespace oris_hw1.framework.core
             _emailSender = emailSender;
         }
 
+        [HttpGET]
         public async Task<string> Send(string to)
         {
             await _emailSender.Send(to);
