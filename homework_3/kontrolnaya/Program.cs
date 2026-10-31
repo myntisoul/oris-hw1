@@ -1,16 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using oris_hw1.kontrolnaya;
+using System.Text.Json;
 
-namespace oris_hw1.kontrolnaya
+namespace oris.hw.kontrolnaya
 {
-    public class Program
+    public class Settings
     {
-        public static void Main()
+        public string[] Prefixes { get; set; }
+    }
+
+    class Program
+    {
+        static async Task Main()
         {
-            Console.WriteLine("HUI");
+            string pathSettings = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "settings.json");
+            string jsonString = File.ReadAllText(pathSettings);
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            Settings settings = JsonSerializer.Deserialize<Settings>(jsonString, options);
+
+            HttpServer server = new HttpServer();
+            server.Start();
+            Console.WriteLine("write 'stop' to stop the server");
+
+            while (true)
+            {
+                string command = Console.ReadLine();
+                if (command == "stop") { server.Stop(); break; }
+            }
         }
     }
 }

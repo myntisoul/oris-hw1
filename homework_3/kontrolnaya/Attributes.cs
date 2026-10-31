@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace oris_hw1.kontrolnaya
 {
@@ -18,4 +14,7 @@ namespace oris_hw1.kontrolnaya
 
     [AttributeUsage(AttributeTargets.Method)]
     public class HttpPOST : Attribute { }
+
+    [AttributeUsage(AttributeTargets.Method)]
+    public class HttpPUT : Attribute { }
 }

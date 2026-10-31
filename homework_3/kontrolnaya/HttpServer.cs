@@ -1,12 +1,8 @@
 ﻿using oris_hw1.framework.core;
 using System.Collections.Specialized;
-using System.ComponentModel.DataAnnotations;
 using System.Net;
-using System.Net.Http;
 using System.Reflection;
-using System.Runtime;
 using System.Text;
-using System.Xml.Linq;
 using TestProject1;
 
 namespace oris_hw1.kontrolnaya;
@@ -14,9 +10,8 @@ namespace oris_hw1.kontrolnaya;
 public class HttpServer
 {
     private int _port = 8888;
-    private string filePath = Path.Combine("static", "index.html"); 
+    private string filePath = Path.Combine("static", "index.html");
     private HttpListener _listener;
-    private CancellationTokenSource cts = new CancellationTokenSource();
     public IEmailSender EmailSender { get; set; } = new RealEmailSender();
 
     public void Start()
@@ -24,8 +19,6 @@ public class HttpServer
         if (!File.Exists(filePath))
         {
             Console.WriteLine($"Ошибка: файл {filePath} не найден!");
-            Console.WriteLine("Сервер не может быть запущен.");
-            Console.ReadLine();
             return;
         }
 
@@ -33,7 +26,6 @@ public class HttpServer
         _listener.Prefixes.Add("http://127.0.0.1:" + _port.ToString() + "/");
         _listener.Start();
         Console.WriteLine("Сервер начал свою работу");
-
         Receive();
     }
 
@@ -58,77 +50,72 @@ public class HttpServer
                 var request = context.Request;
                 string path = request.Url.LocalPath;
                 var response = context.Response;
-                Console.WriteLine("Пришел запрос");
+
                 using var reader = new StreamReader(context.Request.InputStream, context.Request.ContentEncoding);
                 string body = reader.ReadToEnd();
                 string httpMethod = context.Request.HttpMethod;
                 NameValueCollection queryString = request.QueryString;
 
                 var (isHandledByController, responseHtml, statusCode) = await TryRoute(httpMethod, path, body, queryString);
-                Console.WriteLine(isHandledByController);
+
                 if (isHandledByController)
                 {
                     context.Response.StatusCode = statusCode;
+
                     if (statusCode == 303)
                     {
                         context.Response.AddHeader("Location", "/books");
                     }
+
+                    if (!string.IsNullOrEmpty(responseHtml))
+                    {
+                        byte[] buffer = Encoding.UTF8.GetBytes(responseHtml);
+                        context.Response.ContentLength64 = buffer.Length;
+                        context.Response.ContentType = "text/html; charset=utf-8";
+                        using Stream output = context.Response.OutputStream;
+                        await output.WriteAsync(buffer);
+                    }
+                    else
+                    {
+                        context.Response.ContentLength64 = 0;
+                    }
+
+                    context.Response.Close();
+                    Receive();
+                    return;
                 }
 
-                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "static", path.TrimStart('/'));
-
-                FileInfo fileInfo = new FileInfo(filePath);
-
+                string staticFilePath = Path.Combine(Directory.GetCurrentDirectory(), "static", path.TrimStart('/'));
+                FileInfo fileInfo = new FileInfo(staticFilePath);
 
                 if (!fileInfo.Exists)
                 {
                     response.StatusCode = 404;
-                    filePath = Directory.GetCurrentDirectory() + $"/static/404.html";
+                    staticFilePath = Directory.GetCurrentDirectory() + "/static/404.html";
+                    fileInfo = new FileInfo(staticFilePath);
                 }
 
-                switch (fileInfo.Extension)
+                switch (fileInfo.Extension.ToLower())
                 {
-                    case ".html":
-                        response.ContentType = "text/html; charset=utf-8";
-                        break;
-                    case ".css":
-                        response.ContentType = "text/css; charset=utf-8";
-                        break;
-                    case ".js":
-                        response.ContentType = "text/javascript; charset=utf-8";
-                        break;
-                    case ".png":
-                        response.ContentType = "image/png";
-                        break;
-                    case ".ico":
-                        response.ContentType = "image/x-icon";
-                        break;
-                    case ".svg":
-                        response.ContentType = "image/svg+xml";
-                        break;
-                    case ".jpg":
-                        response.ContentType = "image/jpeg";
-                        break;
+                    case ".html": response.ContentType = "text/html; charset=utf-8"; break;
+                    case ".css": response.ContentType = "text/css; charset=utf-8"; break;
+                    case ".js": response.ContentType = "text/javascript; charset=utf-8"; break;
+                    case ".png": response.ContentType = "image/png"; break;
+                    case ".ico": response.ContentType = "image/x-icon"; break;
+                    case ".svg": response.ContentType = "image/svg+xml"; break;
+                    case ".jpg": response.ContentType = "image/jpeg"; break;
                 }
 
-                if (!string.IsNullOrEmpty(responseHtml))
+                if (fileInfo.Exists)
                 {
-                    byte[] buffer = Encoding.UTF8.GetBytes(responseHtml);
-                    context.Response.ContentLength64 = buffer.Length;
-                    context.Response.ContentType = "text/html; charset=utf-8";
-                    using Stream output = context.Response.OutputStream;
+                    byte[] buffer = await File.ReadAllBytesAsync(staticFilePath);
+                    response.ContentLength64 = buffer.Length;
+                    using Stream output = response.OutputStream;
                     await output.WriteAsync(buffer);
                 }
-                else
-                {
-                    context.Response.ContentLength64 = 0;
-                }
 
-
-                Console.WriteLine("Запрос обработан");
                 context.Response.Close();
                 Receive();
-                return;
             }
         }
         catch (HttpListenerException)
@@ -143,20 +130,25 @@ public class HttpServer
 
         string[] segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
         if (segments.Length == 0) return (false, null, 200);
+
         string controllerName = segments[0];
-        string[] strParams = segments.Skip(1).ToArray();
         string actionName = segments.Length > 1 ? segments[1] : "index";
 
         var assembly = Assembly.GetExecutingAssembly();
         var controller = assembly.GetTypes()
             .Where(t => Attribute.IsDefined(t, typeof(HttpController)))
-            .FirstOrDefault(c => c.GetCustomAttribute<HttpController>().Name.ToLower() == controllerName.ToLower());
+            .FirstOrDefault(c =>
+            {
+                var name = c.GetCustomAttribute<HttpController>().Name;
+                return (name ?? c.Name.Replace("Controller", "")).ToLower() == controllerName.ToLower();
+            });
+
         if (controller == null) return (false, null, 200);
 
         var method = controller.GetMethods()
-        .Where(t => t.Name.ToLower() == actionName.ToLower())
-        .FirstOrDefault(t => t.GetCustomAttributes(true)
-            .Any(attr => string.Equals(attr.GetType().Name, $"Http{httpMethod}", StringComparison.OrdinalIgnoreCase)));
+            .Where(t => t.Name.ToLower() == actionName.ToLower())
+            .FirstOrDefault(t => t.GetCustomAttributes(true)
+                .Any(attr => string.Equals(attr.GetType().Name, $"Http{httpMethod}", StringComparison.OrdinalIgnoreCase)));
 
         if (method == null) return (false, null, 200);
 
@@ -185,23 +177,17 @@ public class HttpServer
         }).ToArray();
 
         var constructor = controller.GetConstructors().First();
-
         var ctorParams = constructor.GetParameters();
         object[] ctorArgs = new object[ctorParams.Length];
 
         for (int i = 0; i < ctorParams.Length; i++)
         {
-            Type paramType = ctorParams[i].ParameterType;
-
-            if (paramType == typeof(IEmailSender))
-            {
+            if (ctorParams[i].ParameterType == typeof(IEmailSender))
                 ctorArgs[i] = EmailSender;
-            }
             else
-            {
                 ctorArgs[i] = null;
-            }
         }
+
         var controllerInstance = Activator.CreateInstance(controller, ctorArgs);
         var ret = method.Invoke(controllerInstance, queryParams);
 
@@ -219,119 +205,3 @@ public class HttpServer
         return (true, responseHtml, 200);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
