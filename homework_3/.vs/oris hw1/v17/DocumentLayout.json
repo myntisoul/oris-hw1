@@ -1,53 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\",
+  "WorkspaceRootPath": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0320A5A-7925-4672-9095-5475ED399312}|..\\TestProject1\\TestProject1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\testproject1\\tryroutetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:kontrolnaya\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:kontrolnaya\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\realemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\realemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\attributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:kontrolnaya\\attributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\homeworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\homeworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:kontrolnaya\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\bookstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:kontrolnaya\\bookstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0320A5A-7925-4672-9095-5475ED399312}|..\\TestProject1\\TestProject1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\testproject1\\mailsendtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:kontrolnaya\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\MailSendTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\homeworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\homeworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0320A5A-7925-4672-9095-5475ED399312}|..\\TestProject1\\TestProject1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\testproject1\\tryroutetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0320A5A-7925-4672-9095-5475ED399312}|..\\TestProject1\\TestProject1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\testproject1\\mailsendtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\ihtmltemplaterenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\realemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:framework\\core\\realemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0320A5A-7925-4672-9095-5475ED399312}|..\\TestProject1\\TestProject1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\testproject1\\logintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0320A5A-7925-4672-9095-5475ED399312}|..\\TestProject1\\TestProject1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\testproject1\\templatetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\ihtmltemplaterenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:ihtmltemplaterenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|f:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\htmltemplaterenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\htmltemplaterenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:htmltemplaterenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\LoginTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\TemplateTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,63 +82,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TryRouteTest.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\TestProject1\\TryRouteTest.cs",
-              "RelativeDocumentMoniker": "..\\TestProject1\\TryRouteTest.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\TestProject1\\TryRouteTest.cs",
-              "RelativeToolTip": "..\\TestProject1\\TryRouteTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Attributes.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\Attributes.cs",
+              "RelativeDocumentMoniker": "kontrolnaya\\Attributes.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\Attributes.cs",
+              "RelativeToolTip": "kontrolnaya\\Attributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T16:10:21.842Z",
+              "WhenOpened": "2026-10-31T11:36:19.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookStorage.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\BookStorage.cs",
+              "RelativeDocumentMoniker": "kontrolnaya\\BookStorage.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\BookStorage.cs",
+              "RelativeToolTip": "kontrolnaya\\BookStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T11:30:12.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\BooksController.cs",
+              "RelativeDocumentMoniker": "kontrolnaya\\BooksController.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\BooksController.cs",
+              "RelativeToolTip": "kontrolnaya\\BooksController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T11:28:17.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\Program.cs",
+              "RelativeDocumentMoniker": "kontrolnaya\\Program.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\Program.cs",
+              "RelativeToolTip": "kontrolnaya\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T11:18:56.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "HttpServer.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\HttpServer.cs",
-              "RelativeDocumentMoniker": "framework\\core\\HttpServer.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\HttpServer.cs",
-              "RelativeToolTip": "framework\\core\\HttpServer.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAcwEgAAAARAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\HttpServer.cs",
+              "RelativeDocumentMoniker": "kontrolnaya\\HttpServer.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\HttpServer.cs",
+              "RelativeToolTip": "kontrolnaya\\HttpServer.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAHwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-15T17:26:16.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RealEmailSender.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\RealEmailSender.cs",
-              "RelativeDocumentMoniker": "framework\\core\\RealEmailSender.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\RealEmailSender.cs",
-              "RelativeToolTip": "framework\\core\\RealEmailSender.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T13:55:28.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeworkController.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\HomeworkController.cs",
-              "RelativeDocumentMoniker": "framework\\core\\HomeworkController.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\HomeworkController.cs",
-              "RelativeToolTip": "framework\\core\\HomeworkController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T11:23:05.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LoginController.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\LoginController.cs",
               "RelativeDocumentMoniker": "framework\\core\\LoginController.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\LoginController.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\LoginController.cs",
               "RelativeToolTip": "framework\\core\\LoginController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -130,33 +160,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MailSendTest.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\TestProject1\\MailSendTest.cs",
-              "RelativeDocumentMoniker": "..\\TestProject1\\MailSendTest.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\TestProject1\\MailSendTest.cs",
-              "RelativeToolTip": "..\\TestProject1\\MailSendTest.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "HomeworkController.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\HomeworkController.cs",
+              "RelativeDocumentMoniker": "framework\\core\\HomeworkController.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\HomeworkController.cs",
+              "RelativeToolTip": "framework\\core\\HomeworkController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T15:52:18.096Z",
+              "WhenOpened": "2026-10-30T11:23:05.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MailSendTest.cs",
-              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\MailSendTest.cs",
-              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\MailSendTest.cs",
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\Book.cs",
+              "RelativeDocumentMoniker": "kontrolnaya\\Book.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\kontrolnaya\\Book.cs",
+              "RelativeToolTip": "kontrolnaya\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T11:08:34.47Z"
+              "WhenOpened": "2026-10-31T11:24:20.156Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "TryRouteTest.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\TryRouteTest.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\TryRouteTest.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\TryRouteTest.cs",
+              "RelativeToolTip": "..\\TestProject1\\TryRouteTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T11:13:20.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "IEmailSender.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\IEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\IEmailSender.cs",
               "RelativeDocumentMoniker": "framework\\core\\IEmailSender.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\framework\\core\\IEmailSender.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\IEmailSender.cs",
               "RelativeToolTip": "framework\\core\\IEmailSender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -164,33 +211,60 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAABAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "MailSendTest.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\MailSendTest.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\MailSendTest.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\MailSendTest.cs",
+              "RelativeToolTip": "..\\TestProject1\\MailSendTest.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T17:26:16.467Z"
+              "WhenOpened": "2026-10-30T11:08:34.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
+              "Title": "RealEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\RealEmailSender.cs",
+              "RelativeDocumentMoniker": "framework\\core\\RealEmailSender.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\framework\\core\\RealEmailSender.cs",
+              "RelativeToolTip": "framework\\core\\RealEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T13:55:28.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T17:26:16.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "LoginTest.cs",
               "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\LoginTest.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\LoginTest.cs",
               "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\LoginTest.cs",
+              "RelativeToolTip": "..\\TestProject1\\LoginTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-28T12:56:33.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "IHtmlTemplateRenderer.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\IHtmlTemplateRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\IHtmlTemplateRenderer.cs",
               "RelativeDocumentMoniker": "IHtmlTemplateRenderer.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\IHtmlTemplateRenderer.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\IHtmlTemplateRenderer.cs",
               "RelativeToolTip": "IHtmlTemplateRenderer.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwBsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -198,21 +272,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "TemplateTests.cs",
               "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\TemplateTests.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\TemplateTests.cs",
               "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\TemplateTests.cs",
+              "RelativeToolTip": "..\\TestProject1\\TemplateTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-28T05:53:05.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "HtmlTemplateRenderer.cs",
-              "DocumentMoniker": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\HtmlTemplateRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\HtmlTemplateRenderer.cs",
               "RelativeDocumentMoniker": "HtmlTemplateRenderer.cs",
-              "ToolTip": "F:\\artem\\itis\\\u043E\u0440\u0438\u0441\\oris-hw1\\homework_3\\HtmlTemplateRenderer.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_3\\HtmlTemplateRenderer.cs",
               "RelativeToolTip": "HtmlTemplateRenderer.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACsAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -1,4 +1,5 @@
-﻿using System.Collections.Specialized;
+﻿using oris_hw1.framework.core;
+using System.Collections.Specialized;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Net.Http;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Xml.Linq;
 using TestProject1;
 
-namespace oris_hw1.framework.core;
+namespace oris_hw1.kontrolnaya;
 
 public class HttpServer
 {
@@ -63,13 +64,15 @@ public class HttpServer
                 string httpMethod = context.Request.HttpMethod;
                 NameValueCollection queryString = request.QueryString;
 
-                (bool isHandledByController, string htmlResponse) = await TryRoute(httpMethod, path, body, queryString);
+                var (isHandledByController, responseHtml, statusCode) = await TryRoute(httpMethod, path, body, queryString);
                 Console.WriteLine(isHandledByController);
-                if (isHandledByController) { Receive(); return; }
-                    
-                if (string.IsNullOrEmpty(path) || path.EndsWith("/"))
+                if (isHandledByController)
                 {
-                    path += "index.html";
+                    context.Response.StatusCode = statusCode;
+                    if (statusCode == 303)
+                    {
+                        context.Response.AddHeader("Location", "/books");
+                    }
                 }
 
                 string filePath = Path.Combine(Directory.GetCurrentDirectory(), "static", path.TrimStart('/'));
@@ -108,14 +111,24 @@ public class HttpServer
                         break;
                 }
 
-                byte[] buffer = await File.ReadAllBytesAsync(filePath);
-                response.ContentLength64 = buffer.Length;
-                using Stream output = response.OutputStream;
-                await output.WriteAsync(buffer);
-                await output.FlushAsync();
+                if (!string.IsNullOrEmpty(responseHtml))
+                {
+                    byte[] buffer = Encoding.UTF8.GetBytes(responseHtml);
+                    context.Response.ContentLength64 = buffer.Length;
+                    context.Response.ContentType = "text/html; charset=utf-8";
+                    using Stream output = context.Response.OutputStream;
+                    await output.WriteAsync(buffer);
+                }
+                else
+                {
+                    context.Response.ContentLength64 = 0;
+                }
+
 
                 Console.WriteLine("Запрос обработан");
+                context.Response.Close();
                 Receive();
+                return;
             }
         }
         catch (HttpListenerException)
@@ -124,58 +137,53 @@ public class HttpServer
         }
     }
 
-    public async Task<(bool isHandled, string responseHtml)> TryRoute(string httpMethod, string path, string body, NameValueCollection queryString)
+    public async Task<(bool isHandled, string responseHtml, int code)> TryRoute(string httpMethod, string path, string body, NameValueCollection queryString)
     {
-        if (path.Contains(".") || path == "/") return (false, null);
+        if (path.Contains(".") || path == "/") return (false, null, 200);
 
         string[] segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
-        if (segments.Length == 0) return (false, null);
+        if (segments.Length == 0) return (false, null, 200);
         string controllerName = segments[0];
         string[] strParams = segments.Skip(1).ToArray();
+        string actionName = segments.Length > 1 ? segments[1] : "index";
 
         var assembly = Assembly.GetExecutingAssembly();
         var controller = assembly.GetTypes()
             .Where(t => Attribute.IsDefined(t, typeof(HttpController)))
             .FirstOrDefault(c => c.GetCustomAttribute<HttpController>().Name.ToLower() == controllerName.ToLower());
-        if (controller == null) return (false, null);
+        if (controller == null) return (false, null, 200);
 
         var method = controller.GetMethods()
-            .Where(t => t.GetCustomAttributes(true)
-                .Any(attr => string.Equals(attr.GetType().Name,
-                              $"Http{httpMethod}",
-                              StringComparison.OrdinalIgnoreCase)))
-            .FirstOrDefault();
-        if (method == null) return (false, null);
-        object[] queryParams;
+        .Where(t => t.Name.ToLower() == actionName.ToLower())
+        .FirstOrDefault(t => t.GetCustomAttributes(true)
+            .Any(attr => string.Equals(attr.GetType().Name, $"Http{httpMethod}", StringComparison.OrdinalIgnoreCase)));
 
-        if (httpMethod == "POST")
+        if (method == null) return (false, null, 200);
+
+        NameValueCollection form = new NameValueCollection();
+        if (httpMethod == "POST" || httpMethod == "PUT")
         {
-            Console.WriteLine(body);
-            string email = body.Split('=')[1].Split('&')[0];
-            string password = body.Split("=")[2];
-            email = email.Replace("%40", "@");
-            Console.WriteLine(email + ":" + password);
-            queryParams = new object[] { email, password };
-        }
-        else
-        {
-            var parameters = method.GetParameters();
-            //foreach (var par in parameters) Console.Write(par.Name + " ");
-            queryParams = new object[parameters.Length];
-            for (int i = 0; i < parameters.Length; i++)
+            if (!string.IsNullOrEmpty(body))
             {
-                string value = null;
-
-                if (queryString != null) value = queryString[parameters[i].Name];
-                else if (i < strParams.Length) value = strParams[i];
-                Console.WriteLine(value);
-                Console.WriteLine();
-                if (value != null)
-                    queryParams[i] = Convert.ChangeType(value, parameters[i].ParameterType);
-                else
-                    queryParams[i] = parameters[i].ParameterType.IsValueType ? Activator.CreateInstance(parameters[i].ParameterType) : null;
+                foreach (var pair in body.Split('&'))
+                {
+                    var kv = pair.Split(new[] { '=' }, 2);
+                    if (kv.Length == 2)
+                        form.Add(kv[0], Uri.UnescapeDataString(kv[1].Replace("+", " ")));
+                }
             }
         }
+
+        object[] queryParams = method.GetParameters().Select(p =>
+        {
+            if (p.ParameterType == typeof(NameValueCollection))
+            {
+                return (object)(httpMethod == "GET" ? queryString : form);
+            }
+            if (p.ParameterType == typeof(string) && p.Name == "body") return body;
+            return null;
+        }).ToArray();
+
         var constructor = controller.GetConstructors().First();
 
         var ctorParams = constructor.GetParameters();
@@ -204,8 +212,11 @@ public class HttpServer
             ret = resultProp?.GetValue(task);
         }
 
+        if (ret is ValueTuple<string, int> resultTuple)
+            return (true, resultTuple.Item1, resultTuple.Item2);
+
         string responseHtml = ret?.ToString();
-        return (true, responseHtml);
+        return (true, responseHtml, 200);
     }
 }
 

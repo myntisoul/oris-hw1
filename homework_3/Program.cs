@@ -1,4 +1,4 @@
-﻿using oris_hw1.framework.core;
+﻿using oris_hw1.kontrolnaya;
 using System.Net;
 using System.Text;
 using System.Text.Json;

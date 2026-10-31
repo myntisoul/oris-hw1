@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oris_hw1.framework.core
+namespace oris_hw1.kontrolnaya
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class HttpController : Attribute
