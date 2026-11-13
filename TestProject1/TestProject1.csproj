@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\homework_3\oris hw1.csproj" />
+    <ProjectReference Include="..\homework_9\oris hw1.csproj" />
   </ItemGroup>
 
   <ItemGroup>
