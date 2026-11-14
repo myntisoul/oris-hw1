@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E0320A5A-7925-4672-9095-5475ED399312}|..\\TestProject1\\TestProject1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\testproject1\\tryroutetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\minihttpserver.framework\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:minihttpserver.framework\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\minihttpserver.framework\\contollers\\realemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:minihttpserver.framework\\contollers\\realemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\minihttpserver.framework.unittests\\logintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:minihttpserver.framework.unittests\\logintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\oris hw1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:oris hw1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\minihttpserver.framework.unittests\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:minihttpserver.framework.unittests\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|c:\\users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\minihttpserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9ED06C-ECA2-7C9A-43B5-0383C0F57438}|oris hw1.csproj|solutionrelative:minihttpserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RealEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer.framework\\Contollers\\RealEmailSender.cs",
+              "RelativeDocumentMoniker": "MiniHttpServer.framework\\Contollers\\RealEmailSender.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer.framework\\Contollers\\RealEmailSender.cs",
+              "RelativeToolTip": "MiniHttpServer.framework\\Contollers\\RealEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T11:52:41.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HttpServer.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer.framework\\HttpServer.cs",
+              "RelativeDocumentMoniker": "MiniHttpServer.framework\\HttpServer.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer.framework\\HttpServer.cs",
+              "RelativeToolTip": "MiniHttpServer.framework\\HttpServer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T11:52:04.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TryRouteTest.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\TryRouteTest.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\TryRouteTest.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\TestProject1\\TryRouteTest.cs",
+              "RelativeToolTip": "..\\TestProject1\\TryRouteTest.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T11:50:59.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "oris hw1",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\oris hw1.csproj",
+              "RelativeDocumentMoniker": "oris hw1.csproj",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\oris hw1.csproj",
+              "RelativeToolTip": "oris hw1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-14T11:48:23.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginTest.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer.Framework.UnitTests\\LoginTest.cs",
+              "RelativeDocumentMoniker": "MiniHttpServer.Framework.UnitTests\\LoginTest.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer.Framework.UnitTests\\LoginTest.cs",
+              "RelativeToolTip": "MiniHttpServer.Framework.UnitTests\\LoginTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T11:46:58.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MSTestSettings.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer.Framework.UnitTests\\MSTestSettings.cs",
+              "RelativeDocumentMoniker": "MiniHttpServer.Framework.UnitTests\\MSTestSettings.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer.Framework.UnitTests\\MSTestSettings.cs",
+              "RelativeToolTip": "MiniHttpServer.Framework.UnitTests\\MSTestSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T11:46:55.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer\\Program.cs",
+              "RelativeDocumentMoniker": "MiniHttpServer\\Program.cs",
+              "ToolTip": "C:\\Users\\artem\\source\\repos\\orissss\\oris-hw1\\homework_9\\MiniHttpServer\\Program.cs",
+              "RelativeToolTip": "MiniHttpServer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T11:46:34.498Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
