@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniHttpServer.HtmlTemplating.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83ed967ffc11352f4abc20cebc7bfdd825ab0951")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniHttpServer.HtmlTemplating.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniHttpServer.HtmlTemplating.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

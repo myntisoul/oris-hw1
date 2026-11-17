@@ -3167,11 +3167,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating.UnitTests\\MiniHttpServer.HtmlTemplating.UnitTests.csproj",
+      "projectUniqueName": "F:\\artem\\itis\\oris-hw1\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating.UnitTests\\MiniHttpServer.HtmlTemplating.UnitTests.csproj",
       "projectName": "MiniHttpServer.HtmlTemplating.UnitTests",
-      "projectPath": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating.UnitTests\\MiniHttpServer.HtmlTemplating.UnitTests.csproj",
+      "projectPath": "F:\\artem\\itis\\oris-hw1\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating.UnitTests\\MiniHttpServer.HtmlTemplating.UnitTests.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating.UnitTests\\obj\\",
+      "outputPath": "F:\\artem\\itis\\oris-hw1\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3193,11 +3193,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating\\MiniHttpServer.HtmlTemplating.csproj": {
-              "projectPath": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating\\MiniHttpServer.HtmlTemplating.csproj"
+            "F:\\artem\\itis\\oris-hw1\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating\\MiniHttpServer.HtmlTemplating.csproj": {
+              "projectPath": "F:\\artem\\itis\\oris-hw1\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.HtmlTemplating\\MiniHttpServer.HtmlTemplating.csproj"
             },
-            "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer\\MiniHttpServer.csproj": {
-              "projectPath": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer\\MiniHttpServer.csproj"
+            "F:\\artem\\itis\\oris-hw1\\HomeWork_9\\MiniHttpServer\\MiniHttpServer\\MiniHttpServer.csproj": {
+              "projectPath": "F:\\artem\\itis\\oris-hw1\\HomeWork_9\\MiniHttpServer\\MiniHttpServer\\MiniHttpServer.csproj"
             }
           }
         }

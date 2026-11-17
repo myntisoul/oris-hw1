@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5qA64K6ehXE=",
+  "dgSpecHash": "ZtYBkFfvRGk=",
   "success": true,
-  "projectFilePath": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.ORM\\MiniHttpServer.ORM.csproj",
+  "projectFilePath": "F:\\artem\\itis\\oris-hw1\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.ORM\\MiniHttpServer.ORM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.bcl.cryptography\\8.0.0\\microsoft.bcl.cryptography.8.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.data.sqlclient\\7.1.2\\microsoft.data.sqlclient.7.1.2.nupkg.sha512",
