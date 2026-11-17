@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.18.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MiniHttpServer.Framework\MiniHttpServer.Framework.csproj" />
+    <ProjectReference Include="..\MiniHttpServer.HtmlTemplating\MiniHttpServer.HtmlTemplating.csproj" />
+    <ProjectReference Include="..\MiniHttpServer.ORM\MiniHttpServer.ORM.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="static/**/*" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="settings.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Templates/**/*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\bin\Debug\net8.0\MiniHttpServer.ORM.deps.json
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\bin\Debug\net8.0\MiniHttpServer.ORM.dll
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\bin\Debug\net8.0\MiniHttpServer.ORM.pdb
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\MiniHttpServer.ORM.csproj.AssemblyReference.cache
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\MiniHttpServer.ORM.GeneratedMSBuildEditorConfig.editorconfig
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\MiniHttpServer.ORM.AssemblyInfoInputs.cache
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\MiniHttpServer.ORM.AssemblyInfo.cs
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\MiniHttpServer.ORM.csproj.CoreCompileInputs.cache
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\MiniHttpServer.ORM.dll
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\refint\MiniHttpServer.ORM.dll
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\MiniHttpServer.ORM.pdb
+F:\artem\itis\oris_fixed\HomeWork_9\MiniHttpServer\MiniHttpServer.ORM\obj\Debug\net8.0\ref\MiniHttpServer.ORM.dll

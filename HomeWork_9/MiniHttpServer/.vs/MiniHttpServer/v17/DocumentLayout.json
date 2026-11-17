@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1507CA48-23FD-5A46-8759-08D9EAC52FC6}|MiniHttpServer\\MiniHttpServer.csproj|f:\\artem\\itis\\oris_fixed\\homework_9\\minihttpserver\\minihttpserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1507CA48-23FD-5A46-8759-08D9EAC52FC6}|MiniHttpServer\\MiniHttpServer.csproj|solutionrelative:minihttpserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C859A5F3-FDAE-5C12-9233-3D249D9E9AF9}|MiniHttpServer.Framework\\MiniHttpServer.Framework.csproj|f:\\artem\\itis\\oris_fixed\\homework_9\\minihttpserver\\minihttpserver.framework\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C859A5F3-FDAE-5C12-9233-3D249D9E9AF9}|MiniHttpServer.Framework\\MiniHttpServer.Framework.csproj|solutionrelative:minihttpserver.framework\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HttpServer.cs",
+              "DocumentMoniker": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.Framework\\HttpServer.cs",
+              "RelativeDocumentMoniker": "MiniHttpServer.Framework\\HttpServer.cs",
+              "ToolTip": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer.Framework\\HttpServer.cs",
+              "RelativeToolTip": "MiniHttpServer.Framework\\HttpServer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T09:36:56.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer\\Program.cs",
+              "RelativeDocumentMoniker": "MiniHttpServer\\Program.cs",
+              "ToolTip": "F:\\artem\\itis\\oris_fixed\\HomeWork_9\\MiniHttpServer\\MiniHttpServer\\Program.cs",
+              "RelativeToolTip": "MiniHttpServer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T09:34:02.299Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

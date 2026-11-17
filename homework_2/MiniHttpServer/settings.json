@@ -1,10 +1,9 @@
 {
   "prefixes": [
-    "http://127.0.0.1:8888/connection/"
-    
+    "http://127.0.0.1:8888/"
   ],
   "Port": 8888,
-  "Path": "connection",
+  "Path": "",
   "PublicDirectoryPath": "static",
   "ConnectionString": "Server=localhost;Database=OrisDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;"
 }

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MiniHttpServer.Framework/1.0.0": {
+        "runtime": {
+          "MiniHttpServer.Framework.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MiniHttpServer.Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

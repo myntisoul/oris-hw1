@@ -1,18 +1,15 @@
-﻿using oris_hw1.framework.core;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.Net;
 using System.Reflection;
 using System.Text;
-using TestProject1;
 
 namespace oris_hw1.kontrolnaya;
 
 public class HttpServer
 {
     private int _port = 8888;
-    private string filePath = Path.Combine("static", "index.html");
+    private string filePath = Path.Combine(AppContext.BaseDirectory, "static", "index.html");
     private HttpListener _listener;
-    public IEmailSender EmailSender { get; set; } = new RealEmailSender();
 
     public void Start()
     {
@@ -85,13 +82,13 @@ public class HttpServer
                     return;
                 }
 
-                string staticFilePath = Path.Combine(Directory.GetCurrentDirectory(), "static", path.TrimStart('/'));
+                string staticFilePath = Path.Combine(AppContext.BaseDirectory, "static", path == "/" ? "index.html" : path.TrimStart('/'));
                 FileInfo fileInfo = new FileInfo(staticFilePath);
 
                 if (!fileInfo.Exists)
                 {
                     response.StatusCode = 404;
-                    staticFilePath = Directory.GetCurrentDirectory() + "/static/404.html";
+                    staticFilePath = Path.Combine(AppContext.BaseDirectory, "static", "404.html");
                     fileInfo = new FileInfo(staticFilePath);
                 }
 
@@ -170,25 +167,13 @@ public class HttpServer
         {
             if (p.ParameterType == typeof(NameValueCollection))
             {
-                return (object)(httpMethod == "GET" ? queryString : form);
+                return (object)(httpMethod == "GET" || string.Equals(p.Name, "query", StringComparison.OrdinalIgnoreCase) ? queryString : form);
             }
             if (p.ParameterType == typeof(string) && p.Name == "body") return body;
             return null;
         }).ToArray();
 
-        var constructor = controller.GetConstructors().First();
-        var ctorParams = constructor.GetParameters();
-        object[] ctorArgs = new object[ctorParams.Length];
-
-        for (int i = 0; i < ctorParams.Length; i++)
-        {
-            if (ctorParams[i].ParameterType == typeof(IEmailSender))
-                ctorArgs[i] = EmailSender;
-            else
-                ctorArgs[i] = null;
-        }
-
-        var controllerInstance = Activator.CreateInstance(controller, ctorArgs);
+        var controllerInstance = Activator.CreateInstance(controller);
         var ret = method.Invoke(controllerInstance, queryParams);
 
         if (ret is Task task)

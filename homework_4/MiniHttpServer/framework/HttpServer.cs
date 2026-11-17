@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Net.Http;
 using System.Reflection;
@@ -9,7 +9,7 @@ namespace oris_hw1.framework.core;
 public class HttpServer
 {
     private int _port = 8888;
-    private string filePath = Path.Combine("static", "index.html"); 
+    private string filePath = Path.Combine(AppContext.BaseDirectory, "static", "index.html"); 
     private HttpListener _listener;
     private CancellationTokenSource cts = new CancellationTokenSource();
 
@@ -56,7 +56,7 @@ public class HttpServer
 
                 bool isHandledByController = TryRoute(context);
                 if (isHandledByController) { Receive(); return; }
-                    
+
                 //if (request.HttpMethod == "POST" && path == "/login")
                 //{
                 //    using (var reader = new StreamReader(request.InputStream, request.ContentEncoding))
@@ -85,7 +85,7 @@ public class HttpServer
                     path += "index.html";
                 }
 
-                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "static", path.TrimStart('/'));
+                string filePath = Path.Combine(AppContext.BaseDirectory, "static", path.TrimStart('/'));
 
                 FileInfo fileInfo = new FileInfo(filePath);
 
@@ -93,7 +93,7 @@ public class HttpServer
                 if (!fileInfo.Exists)
                 {
                     response.StatusCode = 404;
-                    filePath = Directory.GetCurrentDirectory() + $"/static/404.html";
+                    filePath = AppContext.BaseDirectory + $"/static/404.html";
                 }
 
                 switch (fileInfo.Extension)
@@ -204,119 +204,3 @@ public class HttpServer
         return true;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
